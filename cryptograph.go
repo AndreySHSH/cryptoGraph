@@ -1,6 +1,6 @@
 package cryptoGraph
 
-type Accesses struct {
+type Access struct {
 	ID  int64
 	Key string
 
@@ -10,9 +10,9 @@ type Accesses struct {
 type Cryptos struct {
 }
 
-func Init(accesses Accesses) (*Cryptos, error) {
+func Init(access Access) (*Cryptos, error) {
 	c := &Cryptos{}
-	_, err := c.decipher(accesses)
+	_, err := c.decipher(access)
 	if err != nil {
 		return nil, err
 	}
@@ -20,6 +20,6 @@ func Init(accesses Accesses) (*Cryptos, error) {
 	return c, nil
 }
 
-func (c *Cryptos) decipher(accesses Accesses) (bool, error) {
+func (c *Cryptos) decipher(access Access) (bool, error) {
 	return true, nil
 }
