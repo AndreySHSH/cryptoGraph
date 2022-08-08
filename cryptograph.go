@@ -4,7 +4,7 @@ type Access struct {
 	ID  int64
 	Key string
 
-	PathFileMap string // distillation file bd
+	PathFileMap string // distillation file map db
 }
 
 type Cryptos struct {
